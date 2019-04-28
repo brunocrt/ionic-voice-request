@@ -1,0 +1,8 @@
+{
+  "name": "GFT Voice Request",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "db42a2c1"
+}

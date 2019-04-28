@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar [color]="isRecording ? 'danger' : 'primary'">
+    <ion-title>
+      GFT Voice Request
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+    <ion-card>
+      <ion-card-header>
+          <ion-text color="light">Detalhes do pedido...</ion-text>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngIf="matches">
+              {{ matches[0] }}
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+ 
+    <ion-row text-center>
+        <ion-col>
+           <img src="{{ '../../assets/img/gft-call-button-' + buttonMode + '.png' }}" (click)="startListening()" width="150"/>
+        </ion-col>
+    </ion-row>
+    
+
+</ion-content>
