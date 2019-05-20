@@ -1,0 +1,267 @@
+{
+  "luis_schema_version": "3.2.0",
+  "versionId": "0.1",
+  "name": "GFT Voice Request",
+  "desc": "Voice request recognition for testing",
+  "culture": "pt-br",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "AlocarArquiteto"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [
+    {
+      "name": "Atividade",
+      "subLists": [
+        {
+          "canonicalForm": "Reunião",
+          "list": [
+            "oportunidade",
+            "reuniao",
+            "bate-papo",
+            "conversa",
+            "para conversar"
+          ]
+        },
+        {
+          "canonicalForm": "Proposta",
+          "list": [
+            "oportunidade",
+            "pre-venda",
+            "pré-venda",
+            "pre-sales"
+          ]
+        },
+        {
+          "canonicalForm": "Assessment",
+          "list": [
+            "assessment",
+            "avaliação",
+            "estudo",
+            "avaliar"
+          ]
+        },
+        {
+          "canonicalForm": "Alocação",
+          "list": [
+            "fazer um trabalho",
+            "ajudar o cliente",
+            "ajudar eles",
+            "dar um auxílio",
+            "auxiliar",
+            "sentar do lado"
+          ]
+        }
+      ],
+      "roles": []
+    },
+    {
+      "name": "Cliente",
+      "subLists": [
+        {
+          "canonicalForm": "Banco",
+          "list": [
+            "Original",
+            "B3",
+            "Santander",
+            "Itaú",
+            "Rabobank",
+            "Bradesco",
+            "Votorantim",
+            "Safra",
+            "Midway",
+            "Banco Toyota"
+          ]
+        },
+        {
+          "canonicalForm": "Cliente",
+          "list": [
+            "Riachuelo",
+            "Fleury",
+            "BPP",
+            "Serasa"
+          ]
+        },
+        {
+          "canonicalForm": "Contato",
+          "list": []
+        },
+        {
+          "canonicalForm": "Seguradora",
+          "list": [
+            "Alper",
+            "Sura",
+            "SulAmerica",
+            "Mapfre"
+          ]
+        }
+      ],
+      "roles": []
+    },
+    {
+      "name": "Profissional",
+      "subLists": [
+        {
+          "canonicalForm": "Consultor",
+          "list": []
+        },
+        {
+          "canonicalForm": "Arquiteto",
+          "list": [
+            "arquiteto",
+            "menino",
+            "cara",
+            "técnico",
+            "profissional",
+            "alguém do seu time"
+          ]
+        },
+        {
+          "canonicalForm": "Especialista",
+          "list": [
+            "desenvolvedor",
+            "tester",
+            "cara de infra",
+            "cara bom",
+            "alguém que manja",
+            "um cara de"
+          ]
+        }
+      ],
+      "roles": []
+    },
+    {
+      "name": "Tecnologia",
+      "subLists": [
+        {
+          "canonicalForm": "Cloud",
+          "list": [
+            "AWS",
+            "Azure",
+            "GCP",
+            "Google Cloud",
+            "IICP",
+            "Openshfit"
+          ]
+        },
+        {
+          "canonicalForm": "Devops",
+          "list": [
+            "Jenkins",
+            "Pipeline",
+            "Build",
+            "Deploy",
+            "Release"
+          ]
+        },
+        {
+          "canonicalForm": "Automação",
+          "list": []
+        },
+        {
+          "canonicalForm": "Desenvolvimento",
+          "list": [
+            "Java",
+            "C#",
+            ".NET",
+            "Javascript",
+            "Node",
+            "Go"
+          ]
+        },
+        {
+          "canonicalForm": "Arquitetura",
+          "list": [
+            "Microserviços",
+            "Camadas",
+            "Distribuída"
+          ]
+        },
+        {
+          "canonicalForm": "Software",
+          "list": []
+        },
+        {
+          "canonicalForm": "Infraestrutura",
+          "list": []
+        },
+        {
+          "canonicalForm": "Teste",
+          "list": [
+            "Cucumber",
+            "Selenium",
+            "JUnit",
+            "NUnit"
+          ]
+        },
+        {
+          "canonicalForm": "Implantação",
+          "list": []
+        },
+        {
+          "canonicalForm": "Servidores",
+          "list": [
+            "Linux",
+            "Windows",
+            "Mainframe"
+          ]
+        }
+      ],
+      "roles": [
+        "Provedores",
+        "Frameworks",
+        "Linguagens"
+      ]
+    }
+  ],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [
+    {
+      "name": "datetimeV2",
+      "roles": []
+    }
+  ],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "eu preciso de ajudar com uma oportunidade no cliente na segunda pela manhã",
+      "intent": "AlocarArquiteto",
+      "entities": []
+    },
+    {
+      "text": "eu tenho uma reunião amanhã e gostaria que um arquiteto participasse",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "o cliente está me pedindo para levar alguém que conhece sobre java numa reunião amanhã",
+      "intent": "AlocarArquiteto",
+      "entities": []
+    },
+    {
+      "text": "preciso de um arquiteto para me ajudar numa reunião",
+      "intent": "AlocarArquiteto",
+      "entities": []
+    },
+    {
+      "text": "tem alguém do seu time que conhece de node para participar de uma reunião na quinta-feira?",
+      "intent": "AlocarArquiteto",
+      "entities": []
+    },
+    {
+      "text": "você pode pedir para alguém do seu time me ajudar numa proposta hoje as 16h?",
+      "intent": "AlocarArquiteto",
+      "entities": []
+    }
+  ],
+  "settings": []
+}

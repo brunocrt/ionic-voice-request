@@ -1,7 +1,7 @@
 <ion-header>
-  <ion-toolbar [color]="isRecording ? 'danger' : 'primary'">
+  <ion-toolbar [color]="isRecording ? 'success' : 'primary'">
     <ion-title>
-      GFT Voice Request
+      {{ appTitle }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,15 +10,8 @@
  
     <ion-card>
       <ion-card-header>
-          <ion-text color="light">Detalhes do pedido...</ion-text>
+          <ion-text color="light">{{ requestMessage }}</ion-text>
       </ion-card-header>
-      <ion-card-content>
-        <ion-list>
-          <ion-item *ngIf="matches">
-              {{ matches[0] }}
-          </ion-item>
-        </ion-list>
-      </ion-card-content>
     </ion-card>
  
     <ion-row text-center>
@@ -27,5 +20,20 @@
         </ion-col>
     </ion-row>
     
+    <ion-card>
+      <ion-card-content>
+        <ion-list style="background-color: rgba(0, 0, 0, 0.1)">
+          <ion-item *ngIf="matches">
+              {{ matches[0] }}
+          </ion-item>
+          <ion-item *ngIf="matches">
+            {{ CONFIRM_MESSAGE }}
+            <ion-button expand="block" (click)="confirmRequest()">Confirmar Pedido</ion-button>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
 
+    <!--ion-button expand="block" (click)="testRequest()">Test Request</ion-button-->
+ 
 </ion-content>
