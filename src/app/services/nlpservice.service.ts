@@ -70,7 +70,9 @@ export class NlpserviceService {
                     client = entities.filter( entity => entity.type == 'Cliente' )[0].resolution.values[0] + ' ' + entities.filter( entity => entity.type == 'Cliente' )[0].entity;
                   if (entities.filter( entity => entity.type == 'Tecnologia' ).length > 0)
                     tecnologia = entities.filter( entity => entity.type == 'Tecnologia' )[0].entity;
-                  if (entities.filter( entity => entity.type == 'builtin.datetimeV2.datetime' ).length > 0)
+                  if (entities.filter( entity => entity.type == 'builtin.datetimeV2.date' ).length > 0)
+                    schedule = entities.filter( entity => entity.type == 'builtin.datetimeV2.date' )[0].resolution.values[0].value;                
+                    if (entities.filter( entity => entity.type == 'builtin.datetimeV2.datetime' ).length > 0)
                     schedule = entities.filter( entity => entity.type == 'builtin.datetimeV2.datetime' )[0].resolution.values[0].value;                
                 
                     // execute callback function with the returned message from NLPService
